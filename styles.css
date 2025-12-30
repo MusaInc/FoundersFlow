@@ -421,18 +421,11 @@ body {
     border-bottom: none;
   }
 
-  body {
-    padding-top: 72px;
-  }
 }
 
 @media (min-width: 769px) {
   .nav-menu {
     display: flex !important;
-  }
-
-  body {
-    padding-top: 80px;
   }
 }
 
