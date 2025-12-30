@@ -219,8 +219,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
-  padding-right: 2rem;
+  padding: 1.1rem 2.2rem 1.1rem 1.1rem;
   position: relative;
+  border-radius: 16px;
+  background: rgba(39, 120, 219, 0.08);
+  border: 1px solid rgba(39, 120, 219, 0.18);
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .approach-summary::-webkit-details-marker {
@@ -230,8 +234,8 @@ body {
 .approach-summary::after {
   content: "+";
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 50%;
+  right: 0.9rem;
   width: 28px;
   height: 28px;
   border-radius: 999px;
@@ -243,12 +247,14 @@ body {
   font-weight: 600;
   font-size: 1rem;
   background: rgba(39, 120, 219, 0.1);
-  transition: transform 0.3s ease;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .approach-card[open] .approach-summary::after {
   content: "–";
-  transform: rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+  background: rgba(39, 120, 219, 0.18);
 }
 
 .approach-title {
@@ -263,9 +269,20 @@ body {
 }
 
 .approach-body {
-  margin-top: 0.85rem;
-  padding-top: 0.85rem;
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
   border-top: 1px solid rgba(23, 52, 70, 0.1);
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.approach-card[open] .approach-body {
+  max-height: 220px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .approach-card ul {
@@ -277,6 +294,11 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 32px 70px -60px rgba(23, 52, 70, 0.45);
   border-color: var(--border-blue-soft);
+}
+
+.approach-card:hover .approach-summary {
+  background: rgba(39, 120, 219, 0.12);
+  border-color: rgba(39, 120, 219, 0.28);
 }
 
 .pricing-card {
