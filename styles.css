@@ -620,6 +620,22 @@ button:not(.btn-primary),
   background: linear-gradient(90deg, var(--brand-blue), var(--brand-blue-light));
 }
 
+.hero-panel {
+  background: rgba(253, 248, 247, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 28px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 28px 70px -60px rgba(23, 52, 70, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.hero-panel .hero-title,
+.hero-panel .hero-pill,
+.hero-panel p {
+  color: var(--brand-dark);
+  text-shadow: none;
+}
+
 .section-shell {
   position: relative;
 }
