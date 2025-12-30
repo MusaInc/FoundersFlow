@@ -191,6 +191,66 @@ body {
   pointer-events: none;
 }
 
+.approach-card[open] {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 70px -60px rgba(23, 52, 70, 0.45);
+}
+
+.approach-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding-right: 2rem;
+  position: relative;
+}
+
+.approach-summary::-webkit-details-marker {
+  display: none;
+}
+
+.approach-summary::after {
+  content: "+";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(39, 120, 219, 0.3);
+  color: var(--brand-blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  background: rgba(39, 120, 219, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.approach-card[open] .approach-summary::after {
+  content: "–";
+  transform: rotate(180deg);
+}
+
+.approach-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--brand-dark);
+}
+
+.approach-preview {
+  font-size: 0.95rem;
+  color: rgba(23, 52, 70, 0.7);
+}
+
+.approach-body {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(23, 52, 70, 0.08);
+}
+
 .approach-card ul {
   list-style: disc;
   padding-left: 1.1rem;
@@ -317,6 +377,14 @@ body {
   border-bottom: none;
 }
 
+.nav-brand {
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: "Sora", "Manrope", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+}
+
 .nav-inner {
   width: 100%;
   max-width: 100%;
@@ -332,7 +400,7 @@ body {
 .nav-link {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--brand-dark);
+  color: rgba(255, 255, 255, 0.9);
   transition: color 0.2s ease;
   position: relative;
 }
@@ -349,7 +417,7 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--brand-blue);
+  color: #fff;
 }
 
 .nav-link:hover::after {
@@ -371,7 +439,7 @@ body {
 .hamburger span {
   width: 24px;
   height: 2px;
-  background-color: var(--brand-dark);
+  background-color: #fff;
   transition: all 0.3s ease;
   border-radius: 2px;
 }
@@ -415,6 +483,10 @@ body {
   .nav-link {
     padding: 0.75rem 0;
     border-bottom: 1px solid rgba(23, 52, 70, 0.1);
+  }
+
+  .nav-link {
+    color: var(--brand-dark);
   }
 
   .nav-link:last-of-type {
@@ -518,6 +590,12 @@ button:not(.btn-primary),
 
 .hero-title {
   position: relative;
+  color: #fff;
+  font-family: "Sora", "Manrope", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
 
 .hero-title::after {
