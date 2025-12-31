@@ -657,8 +657,21 @@ button:not(.btn-primary),
 }
 
 @media (max-width: 640px) {
+  .navbar {
+    width: calc(100% - 24px);
+  }
+
+  .nav-inner {
+    padding: 0.55rem 1.1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 7vw, 2.6rem);
+    line-height: 1.15;
+  }
+
   .hero-panel {
-    padding: 2rem 1.5rem;
+    padding: 1.75rem 1.25rem;
   }
 }
 
