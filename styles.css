@@ -665,8 +665,9 @@ button:not(.btn-primary),
     padding: 0.55rem 1.1rem;
   }
 
-  .nav-menu {
-    display: none;
+  .nav-menu,
+  .nav-menu.nav-menu-active {
+    display: none !important;
   }
 
   .hamburger {
