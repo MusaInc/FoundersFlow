@@ -630,10 +630,11 @@ button:not(.btn-primary),
   gap: 0.5rem;
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid rgba(39, 120, 219, 0.45);
-  background: rgba(39, 120, 219, 0.2);
-  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f1115;
   letter-spacing: 0.25em;
+  box-shadow: 0 12px 28px -22px rgba(15, 17, 21, 0.45);
 }
 
 .hero-content {
@@ -686,10 +687,10 @@ button:not(.btn-primary),
 }
 
 .hero-panel .hero-pill {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 20px -16px rgba(255, 255, 255, 0.35);
+  color: #0f1115;
+  border-color: rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 28px -22px rgba(15, 17, 21, 0.45);
 }
 
 .hero-lede {

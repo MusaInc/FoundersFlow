@@ -629,6 +629,15 @@
           }
         });
       });
+
+      // Slow the hero video playback for a calmer feel.
+      document.querySelectorAll(".hero-video-media").forEach((video) => {
+        const setRate = () => {
+          video.playbackRate = 0.55;
+        };
+        video.addEventListener("loadedmetadata", setRate);
+        setRate();
+      });
     </script>
   </body>
 </html>
