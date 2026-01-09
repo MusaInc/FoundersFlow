@@ -370,21 +370,21 @@ body {
   transform: translateX(-50%);
   width: min(94vw, 1100px);
   z-index: 50;
-  background-color: #fff;
-  backdrop-filter: blur(20px) saturate(1.05);
+  background-color: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(22px) saturate(1.2);
   transition: all 0.3s ease;
   box-shadow: none;
   border-bottom: none;
   border-radius: 999px;
-  border: 1px solid var(--border-soft);
-  box-shadow: 0 16px 50px rgba(23, 52, 70, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
 }
 
 .navbar-scrolled {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.92);
   border-bottom: none;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(18px) saturate(1.2);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.18);
 }
 
 .nav-brand {
@@ -722,14 +722,14 @@ button:not(.btn-primary),
   font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   font-weight: 500;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.98);
 }
 
 .hero-body {
   font-size: 1rem;
   line-height: 1.72;
-  color: rgba(255, 255, 255, 0.92);
-  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.98);
+  opacity: 1;
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
@@ -739,7 +739,7 @@ button:not(.btn-primary),
   font-size: 0.98rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.98);
 }
 
 .hero-divider {
