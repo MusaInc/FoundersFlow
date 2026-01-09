@@ -118,10 +118,10 @@ body {
   top: 0;
   height: 100%;
   background:
-    radial-gradient(circle at 18% 12%, rgba(0, 114, 220, 0.2), transparent 58%),
-    radial-gradient(circle at 80% 0%, rgba(73, 163, 255, 0.1), transparent 46%),
-    linear-gradient(140deg, rgba(2, 6, 12, 0.94) 0%, rgba(7, 12, 20, 0.8) 45%, rgba(2, 6, 12, 0.98) 100%),
-    linear-gradient(180deg, rgba(5, 9, 16, 0.7), rgba(5, 9, 16, 0.5) 55%, rgba(5, 9, 16, 0.18));
+    radial-gradient(circle at 18% 12%, rgba(0, 114, 220, 0.18), transparent 58%),
+    radial-gradient(circle at 80% 0%, rgba(73, 163, 255, 0.08), transparent 46%),
+    linear-gradient(140deg, rgba(2, 6, 12, 0.98) 0%, rgba(5, 9, 16, 0.88) 45%, rgba(2, 6, 12, 0.99) 100%),
+    linear-gradient(180deg, rgba(3, 6, 12, 0.82), rgba(5, 9, 16, 0.6) 55%, rgba(5, 9, 16, 0.24));
   z-index: 1;
 }
 
