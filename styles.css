@@ -781,18 +781,18 @@ button:not(.btn-primary),
 
 .hero-scroll-title {
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-wrap: balance;
 }
 
 .hero-title {
   position: relative;
   color: #fff;
-  font-family: "Sora", "Manrope", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Manrope", "Sora", "Helvetica Neue", Arial, sans-serif;
   font-weight: 800;
   font-size: var(--hero-line-size);
   line-height: 1.02;
-  letter-spacing: -0.012em;
+  letter-spacing: 0.02em;
   text-shadow: 0 0 24px rgba(255, 255, 255, 0.35), 0 22px 60px rgba(0, 0, 0, 0.55);
   max-width: 920px;
   margin-left: auto;
@@ -844,16 +844,17 @@ button:not(.btn-primary),
 
 .hero-tagline {
   font-size: var(--hero-line-size);
-  font-weight: 600;
-  line-height: 1.05;
-  letter-spacing: 0.04em;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
   color: #fff;
   text-shadow: 0 0 16px rgba(255, 255, 255, 0.3), 0 16px 42px rgba(0, 0, 0, 0.5);
 }
 
 .hero-scroll-tagline {
   font-family: "Manrope", "Sora", "Helvetica Neue", Arial, sans-serif;
-  text-wrap: balance;
+  white-space: nowrap;
 }
 
 .hero-divider {
