@@ -736,6 +736,7 @@ button:not(.btn-primary),
   color: #fff;
   padding: 0 1rem;
   isolation: isolate;
+  --hero-line-size: clamp(3.6rem, 8vw, 7.4rem);
 }
 
 .hero-scroll::before {
@@ -789,7 +790,7 @@ button:not(.btn-primary),
   color: #fff;
   font-family: "Sora", "Manrope", "Helvetica Neue", Arial, sans-serif;
   font-weight: 800;
-  font-size: clamp(3.6rem, 8vw, 7.4rem);
+  font-size: var(--hero-line-size);
   line-height: 1.02;
   letter-spacing: -0.012em;
   text-shadow: 0 0 24px rgba(255, 255, 255, 0.35), 0 22px 60px rgba(0, 0, 0, 0.55);
@@ -798,18 +799,7 @@ button:not(.btn-primary),
   margin-right: auto;
 }
 
-.hero-title::after {
-  content: "";
-  display: block;
-  width: 112px;
-  height: 5px;
-  margin-top: 0.7rem;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--brand-blue), var(--brand-blue-light));
-  box-shadow: 0 10px 30px rgba(39, 120, 219, 0.35);
-}
+ 
 
 .hero-panel {
   background: rgba(6, 10, 16, 0.72);
@@ -853,15 +843,16 @@ button:not(.btn-primary),
 }
 
 .hero-tagline {
-  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  font-size: var(--hero-line-size);
   font-weight: 600;
-  letter-spacing: 0.06em;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
   color: #fff;
   text-shadow: 0 0 16px rgba(255, 255, 255, 0.3), 0 16px 42px rgba(0, 0, 0, 0.5);
 }
 
 .hero-scroll-tagline {
-  font-family: "Sora", "Manrope", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Manrope", "Sora", "Helvetica Neue", Arial, sans-serif;
   text-wrap: balance;
 }
 
@@ -982,18 +973,12 @@ button:not(.btn-primary),
     padding: 0.55rem 1.1rem;
   }
 
-  .hero-title {
-    font-size: clamp(3rem, 11.5vw, 4.4rem);
-    line-height: 1.08;
-  }
-
   .hero-scroll-title {
     letter-spacing: 0.06em;
   }
 
-  .hero-tagline {
-    font-size: clamp(1.15rem, 5vw, 1.6rem);
-    letter-spacing: 0.04em;
+  .hero-scroll {
+    --hero-line-size: clamp(3rem, 11.5vw, 4.4rem);
   }
 
   .hero-panel {
