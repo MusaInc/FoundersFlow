@@ -286,6 +286,20 @@ body {
   transform: scale(var(--card-scale));
 }
 
+.package-excluded {
+  color: rgba(23, 52, 70, 0.42);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(23, 52, 70, 0.28);
+}
+
+.packages-callout {
+  border-style: solid;
+  border-color: rgba(39, 120, 219, 0.25);
+  background: linear-gradient(180deg, rgba(224, 236, 255, 0.55), #ffffff);
+  box-shadow: 0 30px 70px -60px rgba(39, 120, 219, 0.45);
+}
+
 .pricing-card h3,
 .timeline-step h3 {
   font-family: "Sora", "Manrope", "Helvetica Neue", Arial, sans-serif;
@@ -451,6 +465,28 @@ body {
   color: var(--brand-dark);
   transition: color 0.2s ease;
   position: relative;
+}
+
+.nav-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+}
+
+.nav-icon-link svg,
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: currentColor;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
 }
 
 .nav-link::after {
@@ -686,8 +722,27 @@ button:not(.btn-primary),
 .hero-scroll {
   position: relative;
   width: 100%;
-  min-height: clamp(12rem, 30vh, 18rem);
+  min-height: clamp(16rem, 38vh, 26rem);
   color: #fff;
+  padding: 0 1rem;
+  isolation: isolate;
+}
+
+.hero-scroll::before {
+  content: "";
+  position: absolute;
+  inset: -2.5rem -1.5rem;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.08) 38%,
+    rgba(15, 23, 42, 0.05) 62%,
+    transparent 75%
+  );
+  filter: blur(16px);
+  opacity: 0.75;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-line {
@@ -701,6 +756,7 @@ button:not(.btn-primary),
   transform: translateY(16px);
   transition: opacity 0.6s ease, transform 0.6s ease;
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-line.is-active {
@@ -712,7 +768,7 @@ button:not(.btn-primary),
 
 .hero-scroll-title {
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
 }
 
 .hero-title {
@@ -720,11 +776,11 @@ button:not(.btn-primary),
   color: #fff;
   font-family: "Sora", "Manrope", "Helvetica Neue", Arial, sans-serif;
   font-weight: 800;
-  font-size: clamp(2.8rem, 5.8vw, 5.6rem);
+  font-size: clamp(3.4rem, 7vw, 6.9rem);
   line-height: 1.05;
   letter-spacing: -0.012em;
   text-shadow: 0 0 24px rgba(255, 255, 255, 0.35), 0 22px 60px rgba(0, 0, 0, 0.55);
-  max-width: 720px;
+  max-width: 860px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -764,7 +820,7 @@ button:not(.btn-primary),
 }
 
 .hero-lede {
-  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
   font-weight: 500;
   line-height: 1.65;
   color: #fff;
@@ -772,18 +828,18 @@ button:not(.btn-primary),
 }
 
 .hero-body {
-  font-size: 1rem;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
   line-height: 1.72;
   color: #fff;
   text-shadow: 0 0 14px rgba(255, 255, 255, 0.2), 0 16px 42px rgba(0, 0, 0, 0.5);
   opacity: 1;
-  max-width: 520px;
+  max-width: 620px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .hero-tagline {
-  font-size: 0.98rem;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
   font-weight: 600;
   letter-spacing: 0.05em;
   color: #fff;
@@ -821,6 +877,12 @@ button:not(.btn-primary),
   background: rgba(255, 255, 255, 0.14);
   color: #fff;
   box-shadow: 0 18px 40px -28px rgba(255, 255, 255, 0.45);
+}
+
+#hero .btn-primary,
+#hero .btn-secondary {
+  font-size: 1rem;
+  padding: 0.9rem 2.1rem;
 }
 
 .btn-secondary {
@@ -901,18 +963,13 @@ button:not(.btn-primary),
     padding: 0.55rem 1.1rem;
   }
 
-  .nav-menu,
-  .nav-menu.nav-menu-active {
-    display: none !important;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
   .hero-title {
-    font-size: clamp(2.3rem, 8vw, 3.2rem);
+    font-size: clamp(2.8rem, 10vw, 4rem);
     line-height: 1.08;
+  }
+
+  .hero-scroll-title {
+    letter-spacing: 0.08em;
   }
 
   .hero-panel {
