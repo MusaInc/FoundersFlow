@@ -125,29 +125,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Hero text rotation
-const heroSection = document.getElementById("hero");
-const heroLines = heroSection ? heroSection.querySelectorAll(".hero-line") : [];
-const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-let heroIndex = 0;
-
-const rotateHeroLines = () => {
-  if (!heroLines.length) return;
-  heroLines.forEach((line, lineIndex) => {
-    line.classList.toggle("is-active", lineIndex === heroIndex);
-  });
-};
-
-if (heroSection && heroLines.length) {
-  rotateHeroLines();
-  if (!prefersReduced.matches) {
-    setInterval(() => {
-      heroIndex = (heroIndex + 1) % heroLines.length;
-      rotateHeroLines();
-    }, 5000);
-  }
-}
-
 // Slow the hero video playback for a calmer feel
 document.querySelectorAll(".hero-video-media").forEach((video) => {
   // Set playback rate immediately to prevent flash of normal speed

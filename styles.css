@@ -872,82 +872,25 @@ button:not(.btn-primary),
   align-items: center;
 }
 
-.hero-scroll {
-  position: relative;
-  width: 100%;
-  min-height: clamp(18rem, 40vh, 28rem);
+.hero-stack {
   color: #fff;
-  padding: 0 1.5rem;
-  isolation: isolate;
-  --hero-line-size: clamp(3.6rem, 8vw, 7.4rem);
-  --hero-tagline-size: clamp(1.5rem, 4.5vw, 4.5rem);
-}
-
-.hero-scroll::before {
-  content: "";
-  position: absolute;
-  inset: -3rem -2rem;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.25) 0%,
-    rgba(255, 255, 255, 0.15) 35%,
-    rgba(0, 133, 255, 0.08) 55%,
-    rgba(15, 23, 42, 0.12) 70%,
-    transparent 85%
-  );
-  filter: blur(20px);
-  opacity: 0.85;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.hero-line {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  opacity: 0;
-  transform: translateY(22px) scale(0.98);
-  filter: blur(8px);
-  transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero-line.is-active {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
-  pointer-events: auto;
-  text-shadow:
-    0 0 30px rgba(255, 255, 255, 0.4),
-    0 2px 8px rgba(0, 0, 0, 0.8),
-    0 8px 24px rgba(0, 0, 0, 0.6);
-}
-
-.hero-scroll-title {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-wrap: balance;
 }
 
 .hero-title {
-  position: relative;
   color: #fff;
   font-family: "Manrope", "Sora", "Helvetica Neue", Arial, sans-serif;
   font-weight: 800;
-  font-size: var(--hero-line-size);
-  line-height: 1.08;
-  letter-spacing: 0.02em;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   text-shadow:
     0 0 30px rgba(255, 255, 255, 0.4),
     0 2px 8px rgba(0, 0, 0, 0.8),
     0 8px 24px rgba(0, 0, 0, 0.6);
   max-width: 920px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 0 1rem;
 }
 
@@ -995,28 +938,22 @@ button:not(.btn-primary),
 }
 
 .hero-tagline {
-  font-size: var(--hero-tagline-size);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: 0.05em;
+  font-family: "Manrope", "Sora", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.1rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   text-shadow:
-    0 0 30px rgba(255, 255, 255, 0.4),
-    0 2px 8px rgba(0, 0, 0, 0.8),
-    0 8px 24px rgba(0, 0, 0, 0.6);
-  padding: 0 1.5rem;
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.7);
   text-align: center;
-  max-width: 95%;
+  max-width: 800px;
   margin: 0 auto;
-  white-space: nowrap;
+  padding: 0 1rem;
 }
 
-.hero-scroll-tagline {
-  font-family: "Manrope", "Sora", "Helvetica Neue", Arial, sans-serif;
-  white-space: nowrap;
-  text-align: center;
-}
 
 .hero-divider {
   height: 1px;
@@ -1135,14 +1072,13 @@ button:not(.btn-primary),
     padding: 0.55rem 1.1rem;
   }
 
-  .hero-scroll-title {
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 3.5rem);
     letter-spacing: 0.06em;
   }
 
-  .hero-scroll {
-    --hero-line-size: clamp(2.5rem, 10vw, 4rem);
-    --hero-tagline-size: clamp(1.1rem, 4vw, 2.5rem);
-    padding: 0 0.75rem;
+  .hero-tagline {
+    font-size: clamp(0.9rem, 4vw, 1.5rem);
   }
 
   .hero-panel {
@@ -1151,15 +1087,14 @@ button:not(.btn-primary),
 }
 
 @media (max-width: 360px) {
-  .hero-scroll {
-    --hero-tagline-size: clamp(0.95rem, 5vw, 1.5rem);
-    padding: 0 0.5rem;
+  .hero-title {
+    font-size: clamp(1.5rem, 9vw, 2.5rem);
+    letter-spacing: 0.04em;
   }
 
   .hero-tagline {
-    letter-spacing: 0.02em;
-    white-space: normal;
-    word-break: break-word;
+    font-size: clamp(0.75rem, 4.5vw, 1.2rem);
+    letter-spacing: 0.08em;
   }
 }
 
