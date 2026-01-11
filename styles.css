@@ -488,8 +488,8 @@ body {
   z-index: 50;
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.78),
-    rgba(255, 255, 255, 0.6)
+    rgba(255, 255, 255, 0.82),
+    rgba(255, 255, 255, 0.68)
   );
   backdrop-filter: blur(26px) saturate(1.55);
   transition: all 0.3s ease;
@@ -505,8 +505,8 @@ body {
 .navbar-scrolled {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.78),
-    rgba(255, 255, 255, 0.6)
+    rgba(255, 255, 255, 0.82),
+    rgba(255, 255, 255, 0.68)
   );
   border-bottom: none;
   backdrop-filter: blur(26px) saturate(1.55);
