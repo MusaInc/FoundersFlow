@@ -863,7 +863,11 @@ button:not(.btn-primary),
 
 .hero-content {
   text-align: center;
-  max-width: 880px;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-stack {
@@ -885,6 +889,11 @@ button:not(.btn-primary),
 .hero-stack {
   color: #fff;
   text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-title {
