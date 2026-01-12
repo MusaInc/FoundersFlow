@@ -125,19 +125,35 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Slow the hero video playback for a calmer feel
+// Slow the hero video playback for a calmer feel with seamless loop
 document.querySelectorAll(".hero-video-media").forEach((video) => {
+  let playbackSpeed = 0.55;
+  let playingForward = true;
+
   // Set playback rate immediately to prevent flash of normal speed
-  video.playbackRate = 0.55;
+  video.playbackRate = playbackSpeed;
 
   // Set rate on multiple events to ensure it's applied
   const setRate = () => {
-    video.playbackRate = 0.55;
+    video.playbackRate = playbackSpeed;
   };
 
   video.addEventListener("loadedmetadata", setRate);
   video.addEventListener("loadeddata", setRate);
   video.addEventListener("play", setRate);
+
+  // Seamless loop by reversing playback direction
+  video.addEventListener("timeupdate", () => {
+    if (playingForward && video.currentTime >= video.duration - 0.1) {
+      // Near the end, reverse direction
+      playingForward = false;
+      video.playbackRate = -playbackSpeed;
+    } else if (!playingForward && video.currentTime <= 0.1) {
+      // Near the beginning, play forward again
+      playingForward = true;
+      video.playbackRate = playbackSpeed;
+    }
+  });
 
   // Double-check after a brief delay
   setTimeout(setRate, 100);
