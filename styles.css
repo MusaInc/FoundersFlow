@@ -354,9 +354,7 @@ body {
 }
 
 .packages-callout::before {
-  height: 4px;
-  background: linear-gradient(90deg, var(--brand-blue), var(--brand-blue-light));
-  opacity: 0.6;
+  display: none;
 }
 
 .packages-callout:hover {
@@ -367,20 +365,15 @@ body {
   border-color: rgba(0, 133, 255, 0.35) !important;
 }
 
-.packages-callout:hover::before {
-  opacity: 1;
-}
 
 .packages-callout ul {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  list-style: none;
+  padding: 0;
 }
 
 .packages-callout ul li {
-  width: 100%;
-  max-width: 400px;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -389,7 +382,6 @@ body {
   }
 
   .packages-callout ul li {
-    max-width: 100%;
     font-size: 0.875rem;
   }
 
@@ -431,6 +423,144 @@ body {
 
 .pricing-card-featured h3 {
   color: var(--brand-blue);
+}
+
+/* How It Works Section */
+.how-it-works-section {
+  background: linear-gradient(135deg, #173446 0%, #0f2230 100%);
+  position: relative;
+}
+
+.section-kicker-light {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.section-title-light {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: var(--font-bold);
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.step-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-blue-light));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.step-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 133, 255, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px -20px rgba(0, 133, 255, 0.3);
+}
+
+.step-card:hover::before {
+  opacity: 1;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 133, 255, 0.2), rgba(73, 163, 255, 0.15));
+  border: 1px solid rgba(0, 133, 255, 0.3);
+  color: var(--brand-blue-light);
+  font-size: 1.25rem;
+  font-weight: var(--font-bold);
+  margin-bottom: 1.5rem;
+}
+
+.step-title {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.25rem;
+  font-weight: var(--font-semibold);
+  margin-bottom: 1rem;
+  font-family: "Sora", "Manrope", "Helvetica Neue", Arial, sans-serif;
+}
+
+.step-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.step-list li {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.step-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--brand-blue-light);
+  font-weight: bold;
+}
+
+.step-footer {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .step-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .step-number {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+  }
+
+  .step-description,
+  .step-list li,
+  .step-footer {
+    font-size: 0.875rem;
+  }
 }
 
 .timeline-step h3 {
