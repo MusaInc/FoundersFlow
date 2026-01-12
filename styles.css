@@ -108,12 +108,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 40, 100, 0.5) 0%,
-    rgba(0, 80, 160, 0.45) 50%,
-    rgba(0, 120, 200, 0.4) 100%
-  );
+  background: rgba(5, 20, 50, 0.6);
   mix-blend-mode: multiply;
   z-index: 2;
   pointer-events: none;
@@ -126,7 +121,7 @@ body {
   position: relative;
   animation: video-fade 20s ease-in-out infinite;
   z-index: 0;
-  filter: saturate(1.2) contrast(1.1) brightness(0.9);
+  filter: saturate(0.6) contrast(0.9) brightness(0.8);
   transform: scale(1.06);
 }
 
@@ -139,13 +134,12 @@ body {
   background:
     linear-gradient(
       to bottom,
-      rgba(3, 7, 18, 0.85) 0%,
-      rgba(3, 7, 18, 0.65) 45%,
-      rgba(3, 7, 18, 0.25) 100%
+      rgba(3, 7, 18, 0.92) 0%,
+      rgba(3, 7, 18, 0.72) 45%,
+      rgba(3, 7, 18, 0.3) 100%
     ),
-    radial-gradient(circle at 18% 12%, rgba(0, 133, 255, 0.28), transparent 60%),
-    radial-gradient(circle at 80% 0%, rgba(73, 163, 255, 0.22), transparent 52%),
-    radial-gradient(circle at 50% 100%, rgba(0, 180, 255, 0.15), transparent 70%);
+    radial-gradient(circle at 18% 12%, rgba(0, 114, 220, 0.18), transparent 60%),
+    radial-gradient(circle at 80% 0%, rgba(73, 163, 255, 0.12), transparent 52%);
   z-index: 3;
 }
 
@@ -379,6 +373,33 @@ body {
 
 .packages-callout ul {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.packages-callout ul li {
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .packages-callout {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .packages-callout ul li {
+    max-width: 100%;
+    font-size: 0.875rem;
+  }
+
+  .packages-callout h3 {
+    font-size: 1.15rem;
+  }
+
+  .packages-callout p {
+    font-size: 0.875rem;
+  }
 }
 
 .pricing-card h3 {
