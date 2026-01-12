@@ -981,7 +981,8 @@ button:not(.btn-primary),
   max-width: 760px;
   margin: 0 auto;
   padding: 0 1rem;
-  white-space: nowrap;
+  width: 100%;
+  display: block;
 }
 
 
@@ -1110,6 +1111,8 @@ button:not(.btn-primary),
   .hero-tagline {
     font-size: clamp(1.14rem, 5.04vw, 1.5rem);
     letter-spacing: 0.16em;
+    white-space: normal;
+    word-wrap: break-word;
   }
 
   .hero-panel {
@@ -1127,6 +1130,8 @@ button:not(.btn-primary),
   .hero-tagline {
     font-size: clamp(1.02rem, 6vw, 1.32rem);
     letter-spacing: 0.14em;
+    white-space: normal;
+    word-wrap: break-word;
   }
 }
 
