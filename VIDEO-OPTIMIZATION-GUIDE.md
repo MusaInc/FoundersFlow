@@ -2,12 +2,10 @@
 
 ## Current Issue
 
-The hero video `newfounderflowvideo.mp4` is **71MB**, which significantly impacts page load time and user experience, especially on slower connections.
+The hero video can be large, which impacts page load time and GitHub Pages deploys.
 
-**Assets folder currently contains:**
-- `newfounderflowvideo.mp4` - 71MB (currently used)
-- `3195441-uhd_3840_2160_25fps.mp4` - 19.8MB (unused)
-- `founderflowvideo.mp4` - 6.3MB (unused)
+**Current hero video:**
+- `0111.mp4`
 
 ---
 
@@ -42,14 +40,14 @@ Navigate to the assets folder and run:
 cd assets
 
 # High quality compression (target ~5MB)
-ffmpeg -i newfounderflowvideo.mp4 \
+ffmpeg -i 0111.mp4 \
   -vcodec libx264 \
   -crf 28 \
   -preset slow \
   -vf "scale=1920:-2" \
   -movflags +faststart \
   -an \
-  newfounderflowvideo-optimized.mp4
+  0111-optimized.mp4
 ```
 
 ### Command Explanation:
@@ -65,10 +63,10 @@ ffmpeg -i newfounderflowvideo.mp4 \
 If the file is still too large, increase CRF:
 ```bash
 # More compression (~3MB)
-ffmpeg -i newfounderflowvideo.mp4 -vcodec libx264 -crf 30 -preset slow -vf "scale=1920:-2" -movflags +faststart -an newfounderflowvideo-optimized.mp4
+ffmpeg -i 0111.mp4 -vcodec libx264 -crf 30 -preset slow -vf "scale=1920:-2" -movflags +faststart -an 0111-optimized.mp4
 
 # Maximum compression (~2MB)
-ffmpeg -i newfounderflowvideo.mp4 -vcodec libx264 -crf 32 -preset slow -vf "scale=1280:-2" -movflags +faststart -an newfounderflowvideo-optimized.mp4
+ffmpeg -i 0111.mp4 -vcodec libx264 -crf 32 -preset slow -vf "scale=1280:-2" -movflags +faststart -an 0111-optimized.mp4
 ```
 
 ### Update HTML:
@@ -76,7 +74,7 @@ ffmpeg -i newfounderflowvideo.mp4 -vcodec libx264 -crf 32 -preset slow -vf "scal
 After compression, update [index.html](index.html):
 
 ```html
-<source src="assets/newfounderflowvideo-optimized.mp4" type="video/mp4" />
+<source src="assets/0111-optimized.mp4" type="video/mp4" />
 ```
 
 ---
@@ -97,15 +95,6 @@ After compression, update [index.html](index.html):
    - Export settings: 1080p, High quality
 
 ---
-
-## Option 3: Use Existing Video
-
-The `founderflowvideo.mp4` (6.3MB) is already optimized. Consider using it instead:
-
-**Update [index.html](index.html) line 89:**
-```html
-<source src="assets/founderflowvideo.mp4" type="video/mp4" />
-```
 
 ---
 
