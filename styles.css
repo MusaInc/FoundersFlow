@@ -503,7 +503,7 @@ body {
   border: 1px solid var(--border-soft);
   border-radius: 30px;
   padding: 2.5rem 2.3rem;
-  padding-left: 5rem;
+  padding-left: 2.3rem;
   margin-bottom: 3rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -535,33 +535,6 @@ body {
     0 30px 80px -40px rgba(0, 133, 255, 0.3);
 }
 
-.step-card:hover .step-number {
-  background: linear-gradient(135deg, rgba(0, 133, 255, 0.15), rgba(73, 163, 255, 0.12));
-  border-color: rgba(0, 133, 255, 0.35);
-  box-shadow: 0 12px 32px -10px rgba(0, 133, 255, 0.4);
-  transform: scale(1.08);
-}
-
-.step-number {
-  position: absolute;
-  left: 0;
-  top: 2.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
-  background: rgba(0, 133, 255, 0.1);
-  border: 2px solid rgba(0, 133, 255, 0.2);
-  color: var(--brand-blue);
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  box-shadow: 0 4px 12px rgba(0, 133, 255, 0.15);
-  z-index: 2;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .step-title {
   color: var(--brand-dark);
