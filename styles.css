@@ -123,6 +123,17 @@ body {
   z-index: 0;
   filter: saturate(0.6) contrast(0.9) brightness(0.8);
   transform: scale(1.06);
+  pointer-events: none;
+}
+
+/* Hide native play overlays for background video on mobile browsers */
+.hero-video-media::-webkit-media-controls,
+.hero-video-media::-webkit-media-controls-panel,
+.hero-video-media::-webkit-media-controls-play-button,
+.hero-video-media::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+  opacity: 0;
 }
 
 .hero-overlay {
